@@ -1,0 +1,33 @@
+fastapi
+pydantic-settings
+uvicorn[standard]
+python-multipart
+python-dotenv
+sqlalchemy
+aiosqlite
+
+# LangChain
+langchain
+langchain-core
+langchain-community
+langchain-google-genai
+langchain-chroma
+langchain-huggingface
+langchain-text-splitters
+
+# Vector & Embeddings
+chromadb
+sentence-transformers
+
+# Document parsers
+pypdf
+python-docx
+unstructured
+
+# Google
+google-generativeai
+
+# Streaming
+sse-starlette
+
+docx2txt
