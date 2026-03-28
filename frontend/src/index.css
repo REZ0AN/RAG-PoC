@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg:       #1a1a1a;
+  --color-sidebar:  #141414;
+  --color-surface:  #242424;
+  --color-hover:    #2a2a2a;
+  --color-active:   #303030;
+  --color-border:   #2e2e2e;
+  --color-accent:   #10a37f;
+  --color-accent-h: #0e9270;
+  --color-muted:    #555555;
+  --color-sub:      #999999;
+  --color-primary:  #e8e8e8;
+}
+
+@layer base {
+  html, body, #root { height: 100%; overflow: hidden; }
+  body {
+    background: #1a1a1a;
+    color: #e8e8e8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+}
+
+@layer components {
+  .prose-chat { color: #e8e8e8; font-size: 0.875rem; line-height: 1.7; }
+  .prose-chat p { margin-bottom: 0.75em; }
+  .prose-chat p:last-child { margin-bottom: 0; }
+  .prose-chat ul, .prose-chat ol { padding-left: 1.4em; margin-bottom: 0.75em; }
+  .prose-chat li { margin-bottom: 0.25em; }
+  .prose-chat h1 { font-size: 1.2em; font-weight: 600; margin: 1em 0 0.4em; }
+  .prose-chat h2 { font-size: 1.05em; font-weight: 600; margin: 1em 0 0.4em; }
+  .prose-chat h3 { font-size: 0.95em; font-weight: 600; margin: 0.8em 0 0.3em; }
+  .prose-chat blockquote { border-left: 2px solid #2e2e2e; padding-left: 0.75em; color: #999; margin: 0.5em 0; }
+  .prose-chat a { color: #10a37f; text-decoration: underline; }
+  .prose-chat strong { font-weight: 600; color: #e8e8e8; }
+  .prose-chat hr { border: none; border-top: 1px solid #2e2e2e; margin: 0.75em 0; }
+  .prose-chat table { width: 100%; border-collapse: collapse; font-size: 0.875em; margin: 0.75em 0; }
+  .prose-chat th { border: 1px solid #2e2e2e; background: #1c1c1c; padding: 6px 12px; font-weight: 600; text-align: left; }
+  .prose-chat td { border: 1px solid #2e2e2e; padding: 6px 12px; color: #999; }
+  .prose-chat p > code,
+  .prose-chat li > code {
+    background: #1e1e1e; border: 1px solid #2e2e2e; color: #e2b96a;
+    padding: 1px 5px; border-radius: 4px; font-size: 0.8em; font-family: monospace;
+  }
+  .prose-chat pre {
+    background: #161616; border: 1px solid #2e2e2e; border-radius: 8px;
+    padding: 0.875em 1em; overflow-x: auto; margin: 0.75em 0; font-size: 0.8em; font-family: monospace;
+  }
+}
+
+@keyframes blink { 0%,100%{ opacity: 1; } 50%{ opacity: 0; } }
+@keyframes spin  { to { transform: rotate(360deg); } }
+.animate-blink   { animation: blink .75s step-end infinite; }
+.animate-spin-s  { animation: spin 1s linear infinite; }
