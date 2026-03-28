@@ -1,0 +1,48 @@
+# Environment variables
+.env
+/.env
+*.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.db
+venv/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+
+# Project-specific
+data/
+db/
+uploads/
+chroma_db/
+SUMMARY.md
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# System files
+.DS_Store
+
+# Git
+.git/
+
+# Editor / IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
